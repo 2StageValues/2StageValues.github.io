@@ -1,0 +1,157 @@
+<head>
+    <link href='css/style.css' rel='stylesheet' type='text/css'>
+	<link href='css/mdb.min.css' rel='stylesheet' type='text/css'>
+    <title>2StageValues</title>
+    <link rel="icon" type="x-icon" href="icon.png">
+    <link rel="shortcut icon" type="x-icon" href="icon.png">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+<body>
+    <script type="application/javascript"
+            src="js/ideologies1.js">
+    </script>
+    <a href="https://github.com/2StageValues/2StageValues.github.io" class="github-corner" aria-label="View source on Github"><svg width="150" height="150" viewBox="-140 -135 175 175" style="fill:#31a8a0; color:#fff; position: absolute; top: -95; border: 0; right: 18.75;" aria-hidden="true">
+        <path fill-rule="evenodd" clip-rule="evenodd" fill="#ffffff" d="M18,1.4C9,1.4,1.7,8.7,1.7,17.7c0,7.2,4.7,13.3,11.1,15.5
+	c0.8,0.1,1.1-0.4,1.1-0.8c0-0.4,0-1.4,0-2.8c-4.5,1-5.5-2.2-5.5-2.2c-0.7-1.9-1.8-2.4-1.8-2.4c-1.5-1,0.1-1,0.1-1
+	c1.6,0.1,2.5,1.7,2.5,1.7c1.5,2.5,3.8,1.8,4.7,1.4c0.1-1.1,0.6-1.8,1-2.2c-3.6-0.4-7.4-1.8-7.4-8.1c0-1.8,0.6-3.2,1.7-4.4
+	c-0.2-0.4-0.7-2.1,0.2-4.3c0,0,1.4-0.4,4.5,1.7c1.3-0.4,2.7-0.5,4.1-0.5c1.4,0,2.8,0.2,4.1,0.5c3.1-2.1,4.5-1.7,4.5-1.7
+	c0.9,2.2,0.3,3.9,0.2,4.3c1,1.1,1.7,2.6,1.7,4.4c0,6.3-3.8,7.6-7.4,8c0.6,0.5,1.1,1.5,1.1,3c0,2.2,0,3.9,0,4.5
+	c0,0.4,0.3,0.9,1.1,0.8c6.5-2.2,11.1-8.3,11.1-15.5C34.3,8.7,27,1.4,18,1.4z"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+    <h1><a href="2StageValues.github.io">2StageValues</a></h1>
+    <hr>
+	<div class="row">
+		  <div class="card border border-warning shadow-0 mb-3 col-sm-4">
+			<div class="card">
+			  <div class="card-body">
+				<h5 class="text-warning" id="card0-info"></h5>
+				<p-small class="card-text">
+				如果你在这个方面获得了更高的得分，那么你更倾向于支持社会主义；如果反之，你更倾向于支持资本主义。</p-small>
+			  </div>
+			</div>
+		  </div>
+		  <div class="card border border-info shadow-0 mb-3 col-sm-4">
+			<div class="card">
+			  <div class="card-body">
+				<h5 class="text-info" id="card1-info"></h5>
+				<p-small class="card-text">
+				如果你在这个方面获得了更高的得分，那么你更倾向于支持政府干预；如果反之，你更倾向于支持自由放任。</p-small>
+			  </div>
+			</div>
+		  </div>
+		  <div class="card border border-primary shadow-0 mb-3 col-sm-4">
+			<div class="card">
+			  <div class="card-body">
+				<h5 class="text-primary" id="card2-info"></h5>
+				<p-small class="card-text">
+				如果你在这个方面获得了更高的得分，那么你更倾向于支持世界主义；如果反之，你更倾向于支持国家主义。</p-small>
+			  </div>
+			</div>
+		  </div>
+		  <div class="card border border-secondary shadow-0 mb-3 col-sm-4">
+			<div class="card">
+			  <div class="card-body">
+				<h5 class="text-secondary" id="card3-info"></h5>
+				<p-small class="card-text">
+				如果你在这个方面获得了更高的得分，那么你更倾向于支持自由民主制；如果反之，你更倾向于支持威权主义。</p-small>
+			  </div>
+			</div>
+		  </div>
+		  <div class="card border border-success shadow-0 mb-3 col-sm-4">
+			<div class="card">
+			  <div class="card-body">
+				<h5 class="text-success" id="card4-info"></h5>
+				<p-small class="card-text">
+				如果你在这个方面获得了更高的得分，那么你更倾向于支持进步价值；如果反之，你更倾向于保卫传统价值。</p-small>
+			  </div>
+			</div>
+		  </div>
+		  <div class="card border border-danger shadow-0 mb-3 col-sm-4">
+			<div class="card">
+			  <div class="card-body">
+				<h5 class="text-danger" id="card5-info"></h5>
+				<p-small class="card-text">
+				如果你在这个方面获得了更高的得分，那么你更倾向于支持激进地实现政治目标；如果反之，你更倾向于支持温和地实现政治目标。</p-small>
+			  </div>
+			</div>
+		  </div>
+    <main class="container">
+		
+			<h2><span class="weight-300" id="ideology-label"></span></h2>
+			<h2><span class="weight-300" id="ideology2-label"></span></h2>
+		<p>
+		</p>
+			<button type="button" class="btn btn-light" data-mdb-ripple-color="dark" id="view-text" onclick="changeView(1)"></button>		
+		<p>
+		</p>
+			<p id="next-matches" style="display: none"></p>
+
+    </main>
+</body>
+<script>
+    let len=Ideos.length;
+    let nameVar=["e","r","d","g","s","v"];
+    let leftVar = new Array(6);
+    let rightVar = new Array(6);
+	let ideoStr=["card0-info","card1-info","card2-info","card3-info","card4-info","card5-info"];
+	let ideoText=["所有制","国家干预","国际政治","国内政治","社会议题","激进程度"];
+	document.getElementById("view-text").innerHTML ="显示更多结果";
+    function getQueryVariable(variable)
+    {
+           var query = window.location.search.substring(1)
+           var vars = query.split("&")
+           for (var i=0;i<vars.length;i++) {
+                   var pair = vars[i].split("=")
+                   if(pair[0] == variable) {return pair[1]}
+           }
+           return(NaN);
+    }
+    for(var i=0;i<6;i++)
+    {
+        leftVar[i] = getQueryVariable(nameVar[i]);
+        rightVar[i] = (100-leftVar[i]).toFixed(1);
+		document.getElementById(ideoStr[i]).innerHTML = ideoText[i]+"："+leftVar[i]+"%";
+    }
+    let tot_econ = leftVar[0]*(1-Math.pow(rightVar[0]/100,2))+leftVar[1]*rightVar[0]/200;
+    let userToIdeo=new Array(len);
+    for(var i=0;i<len;i++)
+    {
+        userToIdeo[i]=[i,Ideos[i].name,Ideos[i].fath,Infinity,Ideos[i].desc];
+    }
+	function changeView(a)
+	{
+		let currentView=document.getElementById("next-matches").style.display;
+		if(currentView=='none')
+		{
+			document.getElementById("view-text").innerHTML ="隐藏更多结果";
+			document.getElementById("next-matches").style.display='block';
+		}
+		if(currentView=='block')
+		{
+			document.getElementById("view-text").innerHTML ="显示更多结果";
+			document.getElementById("next-matches").style.display='none';
+		}
+	}
+    function getIdeoDist(i)
+    {
+        dist=0;
+        dist += Math.pow(Math.abs(Ideos[i].stats.econ - tot_econ), 2);
+        dist += Math.pow(Math.abs(Ideos[i].stats.dipl - leftVar[2]), 1.73856063);
+        dist += Math.pow(Math.abs(Ideos[i].stats.govt - leftVar[3]), 2);
+        dist += Math.pow(Math.abs(Ideos[i].stats.scty - leftVar[4]), 1.650515);
+        dist += Math.pow(Math.abs(Ideos[i].stats.revo - leftVar[5]), 1.5);
+        return Math.sqrt(dist);
+    }
+    for(var i=0;i<len;i++) userToIdeo[i][3]=getIdeoDist(i);
+    userToIdeo.sort(function(x,y){return x[3]-y[3]});
+    const nextMatches = document.getElementById('next-matches');
+    for(var i=0;i<len;i++)
+    {
+        di=1-userToIdeo[i][3]/161.245155;
+        dip=Math.round(di*1000)/10;
+        nextMatches.innerHTML += '<dt>' + userToIdeo[i][1] + ': ' + dip + '%</dt>' +'<dd>' + userToIdeo[i][4] + '</dd>' + '<br/>'
+    }
+    document.getElementById("ideology-label").innerHTML ="最接近匹配："+userToIdeo[0][1];
+    document.getElementById("ideology2-label").innerHTML ="次接近匹配："+userToIdeo[1][1];
+	/*<a href="#" class="btn btn-primary">去了解</a>*/
+</script>

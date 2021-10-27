@@ -1,0 +1,111 @@
+<head>
+    <link href='css/style.css' rel='stylesheet' type='text/css'>
+	<link href='css/mdb.min.css' rel='stylesheet' type='text/css'>
+    <title>2StageValues</title>
+    <link rel="icon" type="x-icon" href="icon.png">
+    <link rel="shortcut icon" type="x-icon" href="icon.png">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+<body>
+    <script type="application/javascript" src="js/qns.js"></script>
+    <a href="https://github.com/2StageValues/2StageValues.github.io" class="github-corner" aria-label="View source on Github"><svg width="150" height="150" viewBox="-140 -135 175 175" style="fill:#31a8a0; color:#fff; position: absolute; top: -95; border: 0; right: 18.75;" aria-hidden="true">
+            <path fill-rule="evenodd" clip-rule="evenodd" fill="#ffffff" d="M18,1.4C9,1.4,1.7,8.7,1.7,17.7c0,7.2,4.7,13.3,11.1,15.5
+        c0.8,0.1,1.1-0.4,1.1-0.8c0-0.4,0-1.4,0-2.8c-4.5,1-5.5-2.2-5.5-2.2c-0.7-1.9-1.8-2.4-1.8-2.4c-1.5-1,0.1-1,0.1-1
+        c1.6,0.1,2.5,1.7,2.5,1.7c1.5,2.5,3.8,1.8,4.7,1.4c0.1-1.1,0.6-1.8,1-2.2c-3.6-0.4-7.4-1.8-7.4-8.1c0-1.8,0.6-3.2,1.7-4.4
+        c-0.2-0.4-0.7-2.1,0.2-4.3c0,0,1.4-0.4,4.5,1.7c1.3-0.4,2.7-0.5,4.1-0.5c1.4,0,2.8,0.2,4.1,0.5c3.1-2.1,4.5-1.7,4.5-1.7
+        c0.9,2.2,0.3,3.9,0.2,4.3c1,1.1,1.7,2.6,1.7,4.4c0,6.3-3.8,7.6-7.4,8c0.6,0.5,1.1,1.5,1.1,3c0,2.2,0,3.9,0,4.5
+        c0,0.4,0.3,0.9,1.1,0.8c6.5-2.2,11.1-8.3,11.1-15.5C34.3,8.7,27,1.4,18,1.4z"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+    <h1><a href="2StageValues.github.io">2StageValues</a></h1>
+    <hr>
+	<main class="container">
+		<div class="row row-cols-1 row-cols-lg-2 g-2 g-lg-2">
+			<div class="card col-md-8">
+				<div id="descText" class="card-header">少女祈祷中...</div>
+				<div class="card-body">
+					 <p id="qnText" class="card-text"></p>
+				</div>
+			</div>
+			<div class="d-grid gap-2 col-md-4">
+				<button id="ansText0" type="button" class="btn btn-light offset-12" data-mdb-ripple-color="dark" onclick="nextQn(0)">强烈同意</button><br>
+				<button id="ansText1" type="button" class="btn btn-light offset-1" data-mdb-ripple-color="dark" onclick="nextQn(1)">同意</button><br>
+				<button id="ansText2" type="button" class="btn btn-light offset-1" data-mdb-ripple-color="dark" onclick="nextQn(2)">中立/不确定</button><br>
+				<button id="ansText3" type="button" class="btn btn-light offset-1" data-mdb-ripple-color="dark" onclick="nextQn(3)">反对</button><br>
+				<button id="ansText4" type="button" class="btn btn-light offset-1" data-mdb-ripple-color="dark" onclick="nextQn(4)">强烈反对</button><br>
+				<button id="backBtn" type="button" class="btn btn-info offset-1" onclick="prevQn()">返回</button>
+				<button id="backBtnOff" type="button" class="btn btn-info offset-1" disabled>返回</button>
+			</div>
+		</div>
+	</main>
+	
+    <script>
+        document.getElementById("descText").innerHTML = "0";
+        var len=qns0.length;
+        let resultVar = new Array(6);
+        let nameVar=["?e","&r","&d","&g","&s","&v"];
+        let resultMax = new Array(6);
+        let resultByQn = new Array(6);
+        let ansText = ["ansText0","ansText1","ansText2","ansText3","ansText4"];
+        document.getElementById("descText").innerHTML = "1";
+        for(var i=0;i<6;i++)//初始化
+        {
+            resultByQn[i] = new Array(len);
+            let p= new Array(len);
+            for(var j=0;j<len;j++)
+            {
+                p[j]=0;
+                for(var k=0;k<5;k++) p[j]=Math.max(p[j],qns0[j].effect[k][i]);
+            }
+            resultMax[i] = p.reduce(plusSum);
+        }
+        document.getElementById("descText").innerHTML = "2";
+        var qn=0;
+        loadQn();
+        function loadQn()
+        {
+            document.getElementById("qnText").innerHTML = qns0[qn].question;
+            for(var i=0;i<5;i++)
+           // document.getElementById(ansText[i]).innerHTML = qns0[qn].answer[i];
+            document.getElementById("descText").innerHTML = "第"+(qn+1)+"题，共"+len+"题";
+            if(qn==0) {
+                document.getElementById("backBtn").style.display='none';
+                document.getElementById("backBtnOff").style.display='block';
+            }
+            else{
+                document.getElementById("backBtn").style.display='block';
+                document.getElementById("backBtnOff").style.display='none';
+            }
+        }
+        function nextQn(a)
+        {
+            for(var i=0;i<6;i++)
+            resultByQn[i][qn]=qns0[qn].effect[a][i];
+            qn++;
+            if(qn<len) loadQn();
+            else loadNx();
+        }
+        function prevQn()
+        {
+            if (qn==0) return;
+            qn--;
+            loadQn();
+        }
+        function plusSum(a,b)
+        {
+            return a+b;
+        }
+        function dist(a,b)
+        {
+            return ((100*(a+b)/(2*b)).toFixed(1));
+        }
+        function loadNx()
+        {
+            for(var i=0;i<6;i++)
+            resultVar[i]=resultByQn[i].reduce(plusSum)
+            let outHtm = `res.html`;
+            for(var i=0;i<6;i++)
+            outHtm += `${nameVar[i]}=${dist(resultVar[i],resultMax[i])}`;
+            location.href = outHtm;
+        }
+    </script>
+</body>
