@@ -11,6 +11,9 @@
     <script type="application/javascript"
             src="js/ideologies1.js">
     </script>
+	<script type="text/javascript"
+  			src="js/mdb.min.js">
+	</script>
     <a href="https://github.com/2StageValues/2StageValues.github.io" class="github-corner" aria-label="View source on Github"><svg width="150" height="150" viewBox="-140 -135 175 175" style="fill:#31a8a0; color:#fff; position: absolute; top: -95; border: 0; right: 18.75;" aria-hidden="true">
         <path fill-rule="evenodd" clip-rule="evenodd" fill="#ffffff" d="M18,1.4C9,1.4,1.7,8.7,1.7,17.7c0,7.2,4.7,13.3,11.1,15.5
 	c0.8,0.1,1.1-0.4,1.1-0.8c0-0.4,0-1.4,0-2.8c-4.5,1-5.5-2.2-5.5-2.2c-0.7-1.9-1.8-2.4-1.8-2.4c-1.5-1,0.1-1,0.1-1
@@ -20,13 +23,18 @@
 	c0,0.4,0.3,0.9,1.1,0.8c6.5-2.2,11.1-8.3,11.1-15.5C34.3,8.7,27,1.4,18,1.4z"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
     <h1><a href="2StageValues.github.io">2StageValues</a></h1>
     <hr>
+	<p id="shared-text" style="display: none">哇哦！你进入了你的朋友的2StageValues单阶段测试的结果链接。您可以通过下面的按钮进行这个测试，也可以尝试我们与众不同的双阶段测试。</p>
+	<div class="d-grid gap-1 col-8 mx-auto">
+			<button type="button" class="btn offset-1" id="shared-button" style="display:none" onclick="location.href='instructions.html';">进行测试</button> <br id="shared-br0" style="display:none">
+	</div>
+	<br id="shared-br1" style="display:none">
 	<div class="row">
 		  <div class="card border border-warning shadow-0 mb-3 col-sm-4">
 			<div class="card">
 			  <div class="card-body">
 				<h5 class="text-warning" id="card0-info"></h5>
 				<p-small class="card-text">
-				如果你在这个方面获得了更高的得分，那么你更倾向于支持社会主义；如果反之，你更倾向于支持资本主义。</p-small>
+					如果你<nobr id="shared-text0" style="display: none">的朋友</nobr>在这个方面获得了更高的得分，那么你更倾向于支持社会主义；如果反之，你更倾向于支持资本主义。</p-small>
 			  </div>
 			</div>
 		  </div>
@@ -35,7 +43,7 @@
 			  <div class="card-body">
 				<h5 class="text-info" id="card1-info"></h5>
 				<p-small class="card-text">
-				如果你在这个方面获得了更高的得分，那么你更倾向于支持政府干预；如果反之，你更倾向于支持自由放任。</p-small>
+				如果你<nobr id="shared-text1" style="display: none">的朋友</nobr>在这个方面获得了更高的得分，那么你更倾向于支持政府干预；如果反之，你更倾向于支持自由放任。</p-small>
 			  </div>
 			</div>
 		  </div>
@@ -44,7 +52,7 @@
 			  <div class="card-body">
 				<h5 class="text-primary" id="card2-info"></h5>
 				<p-small class="card-text">
-				如果你在这个方面获得了更高的得分，那么你更倾向于支持世界主义；如果反之，你更倾向于支持国家主义。</p-small>
+				如果你<nobr id="shared-text2" style="display: none">的朋友</nobr>在这个方面获得了更高的得分，那么你更倾向于支持世界主义；如果反之，你更倾向于支持国家主义。</p-small>
 			  </div>
 			</div>
 		  </div>
@@ -53,7 +61,7 @@
 			  <div class="card-body">
 				<h5 class="text-secondary" id="card3-info"></h5>
 				<p-small class="card-text">
-				如果你在这个方面获得了更高的得分，那么你更倾向于支持自由民主制；如果反之，你更倾向于支持威权主义。</p-small>
+				如果你<nobr id="shared-text3" style="display: none">的朋友</nobr>在这个方面获得了更高的得分，那么你更倾向于支持自由民主制；如果反之，你更倾向于支持威权主义。</p-small>
 			  </div>
 			</div>
 		  </div>
@@ -62,7 +70,7 @@
 			  <div class="card-body">
 				<h5 class="text-success" id="card4-info"></h5>
 				<p-small class="card-text">
-				如果你在这个方面获得了更高的得分，那么你更倾向于支持进步价值；如果反之，你更倾向于保卫传统价值。</p-small>
+				如果你<nobr id="shared-text4" style="display: none">的朋友</nobr>在这个方面获得了更高的得分，那么你更倾向于支持进步价值；如果反之，你更倾向于保卫传统价值。</p-small>
 			  </div>
 			</div>
 		  </div>
@@ -71,10 +79,11 @@
 			  <div class="card-body">
 				<h5 class="text-danger" id="card5-info"></h5>
 				<p-small class="card-text">
-				如果你在这个方面获得了更高的得分，那么你更倾向于支持激进地实现政治目标；如果反之，你更倾向于支持温和地实现政治目标。</p-small>
+				如果你<nobr id="shared-text5" style="display: none">的朋友</nobr>在这个方面获得了更高的得分，那么你更倾向于支持激进地实现政治目标；如果反之，你更倾向于支持温和地实现政治目标。</p-small>
 			  </div>
 			</div>
 		  </div>
+	</div>
     <main class="container">
 		
 			<h2><span class="weight-300" id="ideology-label"></span></h2>
@@ -106,6 +115,23 @@
            }
            return(NaN);
     }
+	function getFrom()
+	{
+		if(getQueryVariable("from")=="share") 
+			{
+				document.getElementById("shared-text").style.display=block;
+				document.getElementById("shared-text0").style.display=block;
+				document.getElementById("shared-text1").style.display=block;
+				document.getElementById("shared-text2").style.display=block;
+				document.getElementById("shared-text3").style.display=block;
+				document.getElementById("shared-text4").style.display=block;
+				document.getElementById("shared-text5").style.display=block;
+				document.getElementById("shared-button").style.display=block;
+				document.getElementById("shared-br0").style.display=block;
+				document.getElementById("shared-br1").style.display=block;
+			}
+	}
+	getFrom();
     for(var i=0;i<6;i++)
     {
         leftVar[i] = getQueryVariable(nameVar[i]);
