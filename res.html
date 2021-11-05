@@ -1,6 +1,6 @@
 <head>
-    <link href='css/style.css' rel='stylesheet' type='text/css'>
-	<link href='css/mdb.min.css' rel='stylesheet' type='text/css'>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+	<link href="css/mdb.min.css" rel="stylesheet" type="text/css">
     <title>2StageValues</title>
     <link rel="icon" type="x-icon" href="/images/2-39c5bb.png">
     <link rel="shortcut icon" type="x-icon" href="/images/2-39c5bb.png">
@@ -33,6 +33,14 @@
 			<div class="card">
 			  <div class="card-body">
 				<h5 class="text-warning" id="card0-info"></h5>
+				  <div class="progress" style="height: 5px">
+				  <div id="resbar-0"
+					class="progress-bar bg-warning"
+					role="progressbar"
+					style="width: 25%"
+				  >
+				  </div>
+				</div><p></p>
 				<p-small class="card-text">
 					如果你<nobr id="shared-text0" style="display: none">的朋友</nobr>在这个方面获得了更高的得分，那么你更倾向于支持社会主义；如果反之，你更倾向于支持资本主义。</p-small>
 			  </div>
@@ -42,6 +50,14 @@
 			<div class="card">
 			  <div class="card-body">
 				<h5 class="text-info" id="card1-info"></h5>
+				  <div class="progress" style="height: 5px">
+				  <div id="resbar-1"
+					class="progress-bar bg-info"
+					role="progressbar"
+					style="width: 25%"
+				  >
+				  </div>
+				</div><p></p>
 				<p-small class="card-text">
 				如果你<nobr id="shared-text1" style="display: none">的朋友</nobr>在这个方面获得了更高的得分，那么你更倾向于支持政府干预；如果反之，你更倾向于支持自由放任。</p-small>
 			  </div>
@@ -51,6 +67,14 @@
 			<div class="card">
 			  <div class="card-body">
 				<h5 class="text-primary" id="card2-info"></h5>
+				  <div class="progress" style="height: 5px">
+				  <div id="resbar-2"
+					class="progress-bar bg-primary"
+					role="progressbar"
+					style="width: 25%"
+				  >
+				  </div>
+				</div><p></p>
 				<p-small class="card-text">
 				如果你<nobr id="shared-text2" style="display: none">的朋友</nobr>在这个方面获得了更高的得分，那么你更倾向于支持世界主义；如果反之，你更倾向于支持国家主义。</p-small>
 			  </div>
@@ -60,6 +84,14 @@
 			<div class="card">
 			  <div class="card-body">
 				<h5 class="text-secondary" id="card3-info"></h5>
+				  <div class="progress" style="height: 5px">
+				  <div id="resbar-3"
+					class="progress-bar bg-secondary"
+					role="progressbar"
+					style="width: 25%"
+				  >
+				  </div>
+				</div><p></p>
 				<p-small class="card-text">
 				如果你<nobr id="shared-text3" style="display: none">的朋友</nobr>在这个方面获得了更高的得分，那么你更倾向于支持自由民主制；如果反之，你更倾向于支持威权主义。</p-small>
 			  </div>
@@ -69,6 +101,14 @@
 			<div class="card">
 			  <div class="card-body">
 				<h5 class="text-success" id="card4-info"></h5>
+				  <div class="progress" style="height: 5px">
+				  <div id="resbar-4"
+					class="progress-bar bg-success"
+					role="progressbar"
+					style="width: 25%"
+				  >
+				  </div>
+				</div><p></p>
 				<p-small class="card-text">
 				如果你<nobr id="shared-text4" style="display: none">的朋友</nobr>在这个方面获得了更高的得分，那么你更倾向于支持进步价值；如果反之，你更倾向于保卫传统价值。</p-small>
 			  </div>
@@ -78,6 +118,14 @@
 			<div class="card">
 			  <div class="card-body">
 				<h5 class="text-danger" id="card5-info"></h5>
+				  <div class="progress" style="height: 5px">
+				  <div id="resbar-5"
+					class="progress-bar bg-danger"
+					role="progressbar"
+					style="width: 25%"
+				  >
+				  </div>
+				</div><p></p>
 				<p-small class="card-text">
 				如果你<nobr id="shared-text5" style="display: none">的朋友</nobr>在这个方面获得了更高的得分，那么你更倾向于支持激进地实现政治目标；如果反之，你更倾向于支持温和地实现政治目标。</p-small>
 			  </div>
@@ -90,7 +138,7 @@
 			<h2><span class="weight-300" id="ideology2-label"></span></h2>
 		<p>
 		</p>
-			<button type="button" class="btn btn-light" data-mdb-ripple-color="dark" id="view-text" onclick="changeView(1)"></button>		
+			<button type="button" class="btn btn-light" data-mdb-ripple-color="grey" id="view-text" onclick="changeView(1)"></button>		
 		<p>
 		</p>
 			<p id="next-matches" style="display: none"></p>
@@ -103,6 +151,7 @@
     let leftVar = new Array(6);
     let rightVar = new Array(6);
 	let ideoStr=["card0-info","card1-info","card2-info","card3-info","card4-info","card5-info"];
+	let barStr=["resbar-0","resbar-1","resbar-2","resbar-3","resbar-4","resbar-5"];
 	let ideoText=["所有制","国家干预","国际政治","国内政治","社会议题","激进程度"];
 	document.getElementById("view-text").innerHTML ="显示更多结果";
     function getQueryVariable(variable)
@@ -136,7 +185,8 @@
     {
         leftVar[i] = getQueryVariable(nameVar[i]);
         rightVar[i] = (100-leftVar[i]).toFixed(1);
-		document.getElementById(ideoStr[i]).innerHTML = ideoText[i]+"："+leftVar[i]+"%";
+		document.getElementById(ideoStr[i]).innerHTML =ideoText[i]+"："+leftVar[i]+"%";
+		document.getElementById(barStr[i]).style.width = `${leftVar[i]}%`;
     }
     let tot_econ = leftVar[0]*(1-Math.pow(rightVar[0]/100,2))+leftVar[1]*rightVar[0]/200;
     let userToIdeo=new Array(len);
