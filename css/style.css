@@ -247,9 +247,8 @@ div.might {
     border-right-style: solid;
 }
 div.progress {
-    background-color: #9c27b0;
     text-align: right;
-    border-left-style: solid;
+    /*border-left-style: solid;*/
 }
 div.tradition {
     background-color: #8bc34a;
