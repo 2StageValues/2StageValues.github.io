@@ -62,7 +62,7 @@ Ideos=[
         "fath":0,
         "stats": {
             "econ": 100,
-            "dipl": 55,
+            "dipl": 65,
             "govt": 100,
             "scty": 100,
             "revo": 75
@@ -73,7 +73,7 @@ Ideos=[
         "name": "左派共产主义",
         "stats": {
             "econ": 100,
-            "dipl": 75,
+            "dipl": 80,
             "govt": 80,
             "scty": 100,
             "revo": 60
@@ -84,7 +84,7 @@ Ideos=[
         "name": "卢森堡主义",
         "stats": {
             "econ": 100,
-            "dipl": 50,
+            "dipl": 55,
             "govt": 60,
             "scty": 90,
             "revo": 90
@@ -95,7 +95,7 @@ Ideos=[
         "name": "列宁主义",
         "stats": {
             "econ": 100,
-            "dipl": 40,
+            "dipl": 45,
             "govt": 40,
             "scty": 70,
             "revo": 100
@@ -106,7 +106,7 @@ Ideos=[
         "name": "毛主义",
         "stats": {
             "econ": 100,
-            "dipl": 30,
+            "dipl": 35,
             "govt": 30,
             "scty": 70,
             "revo": 100
@@ -117,7 +117,7 @@ Ideos=[
         "name": "马克思列宁主义",
         "stats": {
             "econ": 100,
-            "dipl": 20,
+            "dipl": 25,
             "govt": 0,
             "scty": 50,
             "revo": 80
@@ -128,7 +128,7 @@ Ideos=[
         "name": "托洛茨基主义",
         "stats": {
             "econ": 90,
-            "dipl": 60,
+            "dipl": 80,
             "govt": 50,
             "scty": 90,
             "revo": 100
@@ -139,7 +139,7 @@ Ideos=[
         "name": "无政府工团主义",
         "stats": {
             "econ": 80,
-            "dipl": 50,
+            "dipl": 65,
             "govt": 100,
             "scty": 100,
             "revo": 90
@@ -150,8 +150,8 @@ Ideos=[
         "name": "自由意志社会主义",
         "stats": {
             "econ": 80,
-            "dipl": 80,
-            "govt": 85,
+            "dipl": 65,
+            "govt": 80,
             "scty": 80,
             "revo": 50
         },
@@ -161,8 +161,8 @@ Ideos=[
         "name": "民主社会主义",
         "stats": {
             "econ": 80,
-            "dipl": 65,
-            "govt": 50,
+            "dipl": 55,
+            "govt": 65,
             "scty": 70,
             "revo": 30
         },
@@ -172,7 +172,7 @@ Ideos=[
         "name": "新左派",
         "stats": {
             "econ": 80,
-            "dipl": 30,
+            "dipl": 40,
             "govt": 50,
             "scty": 90,
             "revo": 75
@@ -205,7 +205,7 @@ Ideos=[
         "name": "左翼民粹主义",
         "stats": {
             "econ": 70,
-            "dipl": 40,
+            "dipl": 35,
             "govt": 25,
             "scty": 50,
             "revo": 60
@@ -227,8 +227,8 @@ Ideos=[
         "name": "专家政治",
         "stats": {
             "econ": 55,
-            "dipl": 20,
-            "govt": 50,
+            "dipl": 50,
+            "govt": 20,
             "scty": 80,
             "revo": 25
         }
@@ -249,7 +249,7 @@ Ideos=[
         "name": "国家资本主义",
         "stats": {
             "econ": 40,
-            "dipl": 70,
+            "dipl": 60,
             "govt": 20,
             "scty": 70,
             "revo": 20
@@ -260,7 +260,7 @@ Ideos=[
         "name": "左翼自由意志主义",
         "stats": {
             "econ": 55,
-            "dipl": 85,
+            "dipl": 70,
             "govt": 80,
             "scty": 80,
             "revo": 50
@@ -271,7 +271,7 @@ Ideos=[
         "name": "社会自由主义",
         "stats": {
             "econ": 50,
-            "dipl": 75,
+            "dipl": 70,
             "govt": 60,
             "scty": 60,
             "revo": 0
@@ -282,7 +282,7 @@ Ideos=[
         "name": "新自由主义",
         "stats": {
             "econ": 25,
-            "dipl": 85,
+            "dipl": 80,
             "govt": 60,
             "scty": 60,
             "revo": 65
@@ -293,7 +293,7 @@ Ideos=[
         "name": "互助主义",
         "stats": {
             "econ": 60,
-            "dipl": 85,
+            "dipl": 80,
             "govt": 100,
             "scty": 60,
             "revo": 40
@@ -304,7 +304,7 @@ Ideos=[
         "name": "自由意志主义",
         "stats": {
             "econ": 20,
-            "dipl": 90,
+            "dipl": 80,
             "govt": 80,
             "scty": 65,
             "revo": 50
@@ -326,7 +326,7 @@ Ideos=[
         "name": "小政府主义",
         "stats": {
             "econ": 0,
-            "dipl": 80,
+            "dipl": 75,
             "govt": 75,
             "scty": 60,
             "revo": 15
@@ -337,7 +337,7 @@ Ideos=[
         "name": "无政府资本主义",
         "stats": {
             "econ": 0,
-            "dipl": 80,
+            "dipl": 75,
             "govt": 100,
             "scty": 50,
             "revo": 30
@@ -348,7 +348,7 @@ Ideos=[
         "name": "市场无政府主义/个人主义",
         "stats": {
             "econ": 30,
-            "dipl": 90,
+            "dipl": 80,
             "govt": 100,
             "scty": 40,
             "revo": 20
@@ -392,7 +392,7 @@ Ideos=[
         "name": "基督教民主主义",
         "stats": {
             "econ":40,
-            "dipl": 40,
+            "dipl": 60,
             "govt": 50,
             "scty": 30,
             "revo": 20
@@ -403,7 +403,7 @@ Ideos=[
         "name": "进步保守主义",
         "stats": {
             "econ":50,
-            "dipl": 60,
+            "dipl": 40,
             "govt": 45,
             "scty": 55,
             "revo": 0
@@ -414,7 +414,7 @@ Ideos=[
         "name": "君主专制",
         "stats": {
             "econ":40,
-            "dipl": 40,
+            "dipl": 30,
             "govt": 10,
             "scty": 0,
             "revo": 25
@@ -425,7 +425,7 @@ Ideos=[
         "name": "保守主义",
         "stats": {
             "econ":30,
-            "dipl": 50,
+            "dipl": 45,
             "govt": 30,
             "scty": 25,
             "revo": 0
@@ -436,7 +436,7 @@ Ideos=[
         "name": "右翼民粹主义",
         "stats": {
             "econ":30,
-            "dipl": 25,
+            "dipl": 20,
             "govt": 40,
             "scty": 40,
             "revo": 50
@@ -458,7 +458,7 @@ Ideos=[
         "name": "新保守主义",
         "stats": {
             "econ":10,
-            "dipl": 70,
+            "dipl": 35,
             "govt": 35,
             "scty": 10,
             "revo": 10
