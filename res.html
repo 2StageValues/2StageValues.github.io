@@ -2,8 +2,8 @@
     <link href="css/style.css" rel="stylesheet" type="text/css">
 	<link href="css/mdb.min.css" rel="stylesheet" type="text/css">
     <title>2StageValues</title>
-    <link rel="icon" type="x-icon" href="/images/2.png">
-    <link rel="shortcut icon" type="x-icon" href="/images/2.png">
+    <link rel="icon" type="x-icon" href="/images/2-39c5bb.png">
+    <link rel="shortcut icon" type="x-icon" href="/images/2-39c5bb.png">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
@@ -138,7 +138,10 @@
 			<h2><span class="weight-300" id="ideology2-label"></span></h2>
 		<p>
 		</p>
-			<button type="button" class="btn btn-light" data-mdb-ripple-color="grey" id="view-text" onclick="changeView(1)"></button>		
+			<button type="button" class="btn btn-light" data-mdb-ripple-color="grey" id="view-text" onclick="changeView(1)"></button>
+		<a class="btn btn-primary" style="background-color: #55acee;" id="share-twitter" role="button"
+		  ><i class="fab fa-twitter"></i
+		></a>	
 		<p>
 		</p>
 			<p id="next-matches" style="display: none"></p>
@@ -168,16 +171,16 @@
 	{
 		if(getQueryVariable("from")=="share") 
 			{
-				document.getElementById("shared-text").style.display=block;
-				document.getElementById("shared-text0").style.display=block;
-				document.getElementById("shared-text1").style.display=block;
-				document.getElementById("shared-text2").style.display=block;
-				document.getElementById("shared-text3").style.display=block;
-				document.getElementById("shared-text4").style.display=block;
-				document.getElementById("shared-text5").style.display=block;
-				document.getElementById("shared-button").style.display=block;
-				document.getElementById("shared-br0").style.display=block;
-				document.getElementById("shared-br1").style.display=block;
+				document.getElementById("shared-text").style.display='block';
+				document.getElementById("shared-text0").style.display='block';
+				document.getElementById("shared-text1").style.display='block';
+				document.getElementById("shared-text2").style.display='block';
+				document.getElementById("shared-text3").style.display='block';
+				document.getElementById("shared-text4").style.display='block';
+				document.getElementById("shared-text5").style.display='block';
+				document.getElementById("shared-button").style.display='block';
+				document.getElementById("shared-br0").style.display='block';
+				document.getElementById("shared-br1").style.display='block';
 			}
 	}
 	getFrom();
@@ -221,7 +224,11 @@
     for(var i=0;i<len;i++) userToIdeo[i][3]=getIdeoDist(i);
     userToIdeo.sort(function(x,y){return x[3]-y[3]});
     const nextMatches = document.getElementById('next-matches');
-    for(var i=0;i<len;i++)
+
+	href0="https://twitter.com/intent/tweet?text=我的结果是"+userToIdeo[0][1]+"。&tw_p=tweet&url=https%3A%2F%2F2stagevalues.github.io%2F%3Fe%3D"+leftVar[0]+"%26r%3D"+leftVar[1]+"%26d%3D"+leftVar[2]+"%26g%3D"+leftVar[3]+"%26s%3D"+leftVar[4]+"%26v%3D"+leftVar[5]+"%26from%3Dshare";
+	document.getElementById("share-twitter").href=href0;
+    
+	for(var i=0;i<len;i++)
     {
         di=1-userToIdeo[i][3]/161.245155;
         dip=Math.round(di*1000)/10;
