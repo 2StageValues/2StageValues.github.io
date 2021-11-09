@@ -2,8 +2,8 @@
     <link href="css/style.css" rel="stylesheet" type="text/css">
 	<link href="css/mdb.min.css" rel="stylesheet" type="text/css">
     <title>2StageValues</title>
-    <link rel="icon" type="x-icon" href="/images/2-39c5bb.png">
-    <link rel="shortcut icon" type="x-icon" href="/images/2-39c5bb.png">
+    <link rel="icon" type="x-icon" href="/images/2.png">
+    <link rel="shortcut icon" type="x-icon" href="/images/2.png">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
@@ -25,9 +25,8 @@
     <hr>
 	<p id="shared-text" style="display: none">哇哦！你进入了你的朋友的2StageValues单阶段测试的结果链接。您可以通过下面的按钮进行这个测试，也可以尝试我们与众不同的双阶段测试。</p>
 	<div class="d-grid gap-1 col-8 mx-auto">
-			<button type="button" class="btn offset-1" id="shared-button" style="display:none" onclick="location.href='instructions.html';">进行测试</button> <br id="shared-br0" style="display:none">
+			<button type="button" class="btn offset-1" id="shared-button" style="display:none" onclick="location.href='instructions.html';">进行测试</button> <p id="shared-br0" style="display:none">
 	</div>
-	<br id="shared-br1" style="display:none">
 	<div class="row">
 		  <div class="card border border-warning shadow-0 mb-3 col-sm-4">
 			<div class="card">
@@ -172,15 +171,15 @@
 		if(getQueryVariable("from")=="share") 
 			{
 				document.getElementById("shared-text").style.display='block';
-				document.getElementById("shared-text0").style.display='block';
-				document.getElementById("shared-text1").style.display='block';
-				document.getElementById("shared-text2").style.display='block';
-				document.getElementById("shared-text3").style.display='block';
-				document.getElementById("shared-text4").style.display='block';
-				document.getElementById("shared-text5").style.display='block';
+				document.getElementById("shared-text0").style.display='inline';
+				document.getElementById("shared-text1").style.display='inline';
+				document.getElementById("shared-text2").style.display='inline';
+				document.getElementById("shared-text3").style.display='inline';
+				document.getElementById("shared-text4").style.display='inline';
+				document.getElementById("shared-text5").style.display='inline';
 				document.getElementById("shared-button").style.display='block';
 				document.getElementById("shared-br0").style.display='block';
-				document.getElementById("shared-br1").style.display='block';
+				document.getElementById("share-twitter").style.display='none';
 			}
 	}
 	getFrom();
@@ -225,7 +224,7 @@
     userToIdeo.sort(function(x,y){return x[3]-y[3]});
     const nextMatches = document.getElementById('next-matches');
 
-	href0="https://twitter.com/intent/tweet?text=我的结果是"+userToIdeo[0][1]+"。&tw_p=tweet&url=https%3A%2F%2F2stagevalues.github.io%2F%3Fe%3D"+leftVar[0]+"%26r%3D"+leftVar[1]+"%26d%3D"+leftVar[2]+"%26g%3D"+leftVar[3]+"%26s%3D"+leftVar[4]+"%26v%3D"+leftVar[5]+"%26from%3Dshare";
+	href0="https://twitter.com/intent/tweet?text=我的结果是"+userToIdeo[0][1]+"。&tw_p=tweet&url=https%3A%2F%2F2stagevalues.github.io%2Fres.html%3Fe%3D"+leftVar[0]+"%26r%3D"+leftVar[1]+"%26d%3D"+leftVar[2]+"%26g%3D"+leftVar[3]+"%26s%3D"+leftVar[4]+"%26v%3D"+leftVar[5]+"%26from%3Dshare";
 	document.getElementById("share-twitter").href=href0;
     
 	for(var i=0;i<len;i++)
